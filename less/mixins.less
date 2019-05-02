@@ -1,1 +1,24 @@
 // Mixins in here
+@import 'variables.less';
+
+.flex(@justify,@align){
+    display:flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+.navborder(){
+    border-bottom: 2px dashed @navigation-border;
+}
+.buttons(){
+    width:@fullwidth;
+    height:3em;
+    text-align:center;
+    padding: 1em 0;
+    font-size:2em;
+    color:@white;
+    border-radius:10px;
+    background-color:@button-bg;
+    @media @mobile{
+        width:80%;
+    }
+}
