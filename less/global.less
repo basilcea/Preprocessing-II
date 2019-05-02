@@ -1,3 +1,4 @@
+@import 'variables.less';
 * {
   box-sizing: border-box;
 }
@@ -35,12 +36,15 @@ p {
 }
 
 img {
-  max-width: 100%;
+  max-width: @fullwidth;
   height: auto;
 }
 
 .container {
-  max-width: 800px;
-  width: 100%;
+  max-width: 1000px;
+  width: @fullwidth;
   margin: 0 auto;
+  @media @mobile{
+    padding: 0 5%
+  }
 }

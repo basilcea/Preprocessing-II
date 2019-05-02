@@ -1,1 +1,34 @@
 // Navigation Styles here
+@import 'mixins.less';
+@import 'variables.less'; 
+.top-div{
+    .flex(space-between, baseline);
+    width:@fullwidth;
+    padding:3rem 22rem;
+    .navborder();
+    @media @mobile{
+        flex-direction:column;
+        padding:2rem 10px;
+        .flex(space-between, center);
+    }
+    .navbar{
+        width:@halfwidth;
+        @media @mobile{
+            width:@fullwidth;
+        }
+        .flex(flex-end, stretch);
+        a{
+            text-decoration:none;
+            color: black;
+            width:25%;
+            text-align:center;
+            padding-right:1em;
+            font-size:1.8em;
+            @media @mobile{
+                padding-top:10%;
+                font-size:1.4em;
+            }
+        }
+
+    }
+}
